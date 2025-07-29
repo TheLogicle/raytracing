@@ -2,6 +2,11 @@
 
 std::vector<obj::object*> obj::objectList;
 
+obj::object::object ()
+{
+	obj::objectList.push_back(this);
+}
+
 
 
 float obj::object::O_shift (float x, float y, float z)
@@ -26,15 +31,6 @@ float obj::object::O_z_shift (float x, float y, float z)
 
 
 
-
-
-void obj::clearObjects ()
-{
-	for (size_t i = 0; i < objectList.size(); ++i)
-	{
-		delete objectList[i];
-	}
-}
 
 obj::color obj::color::operator << (float newWeight)
 {

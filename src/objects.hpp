@@ -3,7 +3,9 @@
 
 #include "raytracing.hpp"
 
+
 #include <vector>
+#include <memory>
 
 
 namespace obj
@@ -63,65 +65,16 @@ namespace obj
 		float O_y_shift (float, float, float);
 		float O_z_shift (float, float, float);
 
+		object ();
 		virtual ~object () {};
 
 	};
 
 	extern std::vector<object*> objectList;
 
-	void initObjects ();
-	void clearObjects ();
-
-
-	struct Cube1 : object
-	{
-		Cube1();
-
-		virtual float O (float, float, float);
-
-		virtual float O_x (float, float, float);
-		virtual float O_y (float, float, float);
-		virtual float O_z (float, float, float);
-
-	};
-
-	struct Sphere1 : object
-	{
-		Sphere1();
-
-		virtual float O (float, float, float);
-
-		virtual float O_x (float, float, float);
-		virtual float O_y (float, float, float);
-		virtual float O_z (float, float, float);
-
-	};
-
-	struct Sphere2 : object
-	{
-		Sphere2();
-
-		virtual float O (float, float, float);
-
-		virtual float O_x (float, float, float);
-		virtual float O_y (float, float, float);
-		virtual float O_z (float, float, float);
-
-	};
-
-	struct Floor : object
-	{
-		Floor();
-
-		virtual float O (float, float, float);
-
-		virtual float O_x (float, float, float);
-		virtual float O_y (float, float, float);
-		virtual float O_z (float, float, float);
-
-	};
-
 }
+
+
 
 
 

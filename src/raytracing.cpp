@@ -2,6 +2,9 @@
 
 #include "objects.hpp"
 
+// this include is necessary, even if it gives an unused warning
+#include "scenes/sceneInclude.hpp"
+
 #include <iostream>
 
 
